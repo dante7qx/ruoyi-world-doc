@@ -4,3 +4,4 @@ node_modules/
 .project
 .DS_Store
 package-lock.json
+docs/.vuepress/dist/
