@@ -32,15 +32,16 @@ jobs:
           path: pageRepo
           token: ${{ secrets.CICD_ACTION_TOKEN }}     # 使用之前生成的 Personal Access Token
 
-      - name: Commit files to dante7qx.github.io
-        run: |
-          ls -la docRepo
-          ls -la pageRepo
+      - name: Copy docRepo build dist to pageRepo
+        run: | 
+          cp -r docRepo/docs/.vuepress/dist/* pageRepo/
 
-#          cp -r docRepo/.vuepress/dist  ./
-#          git config --local user.email "sunchao.0129@163.com"
-#          git config --local user.name "dante7qx"
-#          git add .
-#          git commit -m "更新知识库页面"
-#          git push
+      - name: Commit files to dante7qx.github.io
+        working-directory: pageRepo
+        run: |
+          git config --local user.email "sunchao.0129@163.com"
+          git config --local user.name "dante7qx"
+          git add .
+          git commit -m "更新知识库页面"
+          git push
 
