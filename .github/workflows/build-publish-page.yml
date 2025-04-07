@@ -18,6 +18,8 @@ jobs:
 
       - name: Build project
         run: |
+          echo "Token: ${{ secrets.CICD_ACTION_TOKEN }}"
+          echo "Token2: ${{ env.CICD_ACTION_TOKEN }}"
           npm -v 
           npm install -g vuepress
           npm install dayjs 
