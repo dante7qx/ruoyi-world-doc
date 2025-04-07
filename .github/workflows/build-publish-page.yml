@@ -1,0 +1,32 @@
+name: Build and Publish Page
+
+on:
+  push:
+    branches: [ main ]  # 触发工作流的分支，可根据需要修改
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout dante7qx doc
+        uses: actions/checkout@v3
+
+      - name: Build project
+        run: |
+          npm run build   # 在这里运行编译命令，生成需要的文件
+
+      - name: Checkout dante7qx page
+        uses: actions/checkout@v3
+        with:
+          repository: dante7qx/dante7qx.github.io  # 替换为 repo2 的用户名和仓库名
+          token: ${{ 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 }}  # 使用之前生成的 Personal Access Token
+
+      - name: Commit files to dante7qx.github.io
+        run: |
+          cp -r docs/.vuepress/dist  /
+          git config --local user.email "sunchao.0129@163.com"
+          git config --local user.name "dante7qx"
+          git add .
+          git commit -m "更新知识库页面"
+          git push
+
