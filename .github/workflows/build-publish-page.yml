@@ -20,7 +20,8 @@ jobs:
         run: |
           npm -v 
           npm install -g vuepress
-          npm run build   # 在这里运行编译命令，生成需要的文件
+          npm install dayjs 
+          npm run build
 
       - name: Checkout dante7qx.io page
         uses: actions/checkout@v3
