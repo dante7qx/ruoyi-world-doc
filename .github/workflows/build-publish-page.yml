@@ -14,6 +14,8 @@ jobs:
       - name: Build project
         run: |
           ls -la
+          npm -v
+          npm install -g vuepress
           npm run build   # 在这里运行编译命令，生成需要的文件
 
       - name: Checkout dante7qx page
