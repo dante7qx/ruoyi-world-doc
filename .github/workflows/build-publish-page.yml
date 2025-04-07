@@ -11,21 +11,24 @@ jobs:
       - name: Checkout dante7qx doc
         uses: actions/checkout@v3
 
+      - name: Set up Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+
       - name: Build project
         run: |
-          ls -la
-          npm -v
+          npm -v 
           npm install -g vuepress
           npm run build   # 在这里运行编译命令，生成需要的文件
 
-      - name: Checkout dante7qx page
+      - name: Checkout dante7qx.io page
         uses: actions/checkout@v3
         with:
           repository: dante7qx/dante7qx.github.io  # 替换为 repo2 的用户名和仓库名
           token: ${{ secrets.ACCESS_TOKEN }}  # 使用之前生成的 Personal Access Token
 
       - name: Commit files to dante7qx.github.io
-        working-directory: dante7qx.github.io
         run: |
           cp -r docs/.vuepress/dist  /
           git config --local user.email "sunchao.0129@163.com"
