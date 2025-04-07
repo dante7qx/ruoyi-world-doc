@@ -18,8 +18,11 @@ jobs:
 
       - name: Build project
         run: |
-          echo "Token: ${{ secrets.CICD_ACTION_TOKEN }}"
-          echo "Token2: ${{ env.CICD_ACTION_TOKEN }}"
+          if [ -n "${{ secrets.CICD_ACTION_TOKEN }}" ]; then
+            echo "Token exists"
+          else
+            echo "Token is empty"
+          fi
           npm -v 
           npm install -g vuepress
           npm install dayjs 
