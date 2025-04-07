@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Checkout dante7qx doc
         uses: actions/checkout@v3
+        with:
+          path: docRepo
 
       - name: Set up Node.js 16.x
         uses: actions/setup-node@v2
