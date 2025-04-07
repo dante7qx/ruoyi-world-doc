@@ -17,8 +17,8 @@ jobs:
           node-version: '16.x'
 
       - name: Build project
+        working-directory: docRepo
         run: |
-          npm -v 
           npm install -g vuepress
           npm install dayjs 
           npm run build
@@ -27,16 +27,17 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: dante7qx/dante7qx.github.io     # 替换为 dante7qx.github.io 的用户名和仓库名
+          path: pageRepo
           token: ${{ secrets.CICD_ACTION_TOKEN }}     # 使用之前生成的 Personal Access Token
 
       - name: Commit files to dante7qx.github.io
         run: |
           ls -la
-          
-          cp -r docs/.vuepress/dist  ./
-          git config --local user.email "sunchao.0129@163.com"
-          git config --local user.name "dante7qx"
-          git add .
-          git commit -m "更新知识库页面"
-          git push
+
+#          cp -r docs/.vuepress/dist  ./
+#          git config --local user.email "sunchao.0129@163.com"
+#          git config --local user.name "dante7qx"
+#          git add .
+#          git commit -m "更新知识库页面"
+#          git push
 
