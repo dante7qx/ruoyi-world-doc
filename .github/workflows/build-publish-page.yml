@@ -34,9 +34,10 @@ jobs:
 
       - name: Commit files to dante7qx.github.io
         run: |
-          ls -la
+          ls -la docRepo
+          ls -la pageRepo
 
-#          cp -r docs/.vuepress/dist  ./
+#          cp -r docRepo/.vuepress/dist  ./
 #          git config --local user.email "sunchao.0129@163.com"
 #          git config --local user.name "dante7qx"
 #          git add .
