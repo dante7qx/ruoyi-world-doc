@@ -26,7 +26,7 @@ jobs:
       - name: Checkout dante7qx.io page
         uses: actions/checkout@v3
         with:
-          repository: dante7qx/dante7qx.github.io  # 替换为 repo2 的用户名和仓库名
+          repository: dante7qx/dante7qx.github.io  # 替换为 dante7qx.github.io 的用户名和仓库名
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}  # 使用之前生成的 Personal Access Token
 
       - name: Commit files to dante7qx.github.io
