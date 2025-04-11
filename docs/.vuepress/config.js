@@ -98,6 +98,13 @@ module.exports = {
         ]
       },
       {
+        text: 'AI',
+        link: '/ai/',
+        items: [
+          { text: 'DeepSeek', link: '/pages/2c0778/' },
+        ]
+      },
+      {
         text: '更多',
         link: '/more/',
         items: [
