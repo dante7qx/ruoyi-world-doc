@@ -42,6 +42,7 @@ module.exports = {
               { text: 'Maven库配置', link: '/pages/1a8a54/' },
               { text: '精灵开发框架', link: '/pages/b0ea1c/' },
               { text: '精灵框架插件', link: '/pages/d3e913/' },
+              { text: 'Spring系列', link: '/pages/ee3759/' },
             ],
           },
           {
