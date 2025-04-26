@@ -14,6 +14,7 @@ module.exports = {
         link: '/frontend/',
         items: [
           { text: 'npm库配置', link: '/pages/66afcf/' },
+          { text: 'JavaScript', link: '/pages/bf1e77/' },
           {
             text: 'PC端',
             items: [
@@ -30,6 +31,7 @@ module.exports = {
               { text: '小程序', link: '/pages/8d5c6e/' },
             ],
           },
+
         ],
       },
       {
