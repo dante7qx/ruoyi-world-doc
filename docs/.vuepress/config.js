@@ -91,12 +91,13 @@ module.exports = {
         text: '技术',
         link: '/technology/',
         items: [
+          { text: '^_^ 灵心随笔', link: '/pages/f83b3e/' },
           { text: '视频监控', link: '/pages/5c3156/' },
-          { text: 'MySQL系列～', link: '/pages/42b7af/' },
+          { text: '^_^ MySQL系列', link: '/pages/42b7af/' },
           { text: '应用高可用', link: '/pages/ed7a01/' },
           { text: '静态代码扫描', link: '/pages/d25fa6/' },
           { text: 'OpenSSH版本升级', link: '/pages/273316/' },
-          { text: '区块链～', link: '/pages/8a6c0a/' },
+          { text: '^_^ 区块链', link: '/pages/8a6c0a/' },
           { text: '搜索技巧', link: '/pages/44cbd7/' },
         ]
       },
