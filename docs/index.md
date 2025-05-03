@@ -4,7 +4,7 @@ home: true
 heroText: 精灵知识库
 tagline: 精灵知识库
 actionText: 立刻进入 →
-actionLink: /deploy/
+actionLink: /backend/
 
 features: # 可选的
   - title: 前端
