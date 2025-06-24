@@ -105,6 +105,7 @@ module.exports = {
         text: 'AI',
         link: '/ai/',
         items: [
+          { text: 'AI知识', link: '/pages/67c80c/' },
           { text: 'DeepSeek', link: '/pages/2c0778/' },
           { text: 'MCP协议', link: '/pages/de3316/' },
         ]
